@@ -1,3 +1,5 @@
-// @use './c-' as *;
+@use './body' as *;
+@use './main' as *;
+@use './card' as *;
 
 @tailwind components;

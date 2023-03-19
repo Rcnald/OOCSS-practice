@@ -1,0 +1,16 @@
+$object-name: 'o-location';
+$layout-name: 'l-location';
+
+.#{$object-name}{
+    @apply flex items-center gap-[0.375rem] font-bold text-regular-font-size text-accent-text-color;
+}
+
+.#{$layout-name}{
+    @apply w-fit h-fit;
+
+    &__icon{
+        --icon-size: 0.8125rem;
+
+        @apply w-[var(--icon-size)] h-[var(--icon-size)] shrink-0
+    }
+}

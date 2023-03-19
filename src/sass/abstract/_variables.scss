@@ -1,7 +1,53 @@
+@use '../abstract/breakpoints' as *;
+
 :root{
     // Colors
 
     --color-white: #FFF;
+
+    --accent-text-color: #C2BFF4;
+    --rate-text-color: #87EBCD; 
+    --main-text-color: #E7E6FB;
+    --indicator-text-color: #DAD8F7;
+
+    --card-bg-color: #6D67D0;
+    --card-weather-bg-color: rgba(102, 96, 200,0.6);
+
+    // Fonts family
+
+    --main-font-family: 'Lato', sans-serif;
+
+    // Fonts size
+
+    --header-font-size : 1.125rem;
+    --regular-font-size: 0.875rem;
+    --small-font-size: 0.75rem;
+    --emphasis-font-size: 5rem;
+
+    // Padding
+
+    --main-padding: 1.875rem;
+    --card-padding: 1rem;
+    --week-weather-padding: 2.5rem;
+    --temperature-padding : 1.25rem;
+
+    @include breakpoint(min,md){
+        --main-padding: 3.75rem;
+    };
+
+    // radius
+
+    --card-radius: 0.625rem;
+
+    // image
+
+    --main-bg-image: url(../assets/background.svg);
+    --card-bg-image: url(../assets/card-background.svg);
+    --cloud-big-image: url(../assets/cloud-big.svg);
+
+    // blur
+
+    --main-blur: 0.625rem;
 }
 
 /*

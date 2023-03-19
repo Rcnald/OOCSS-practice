@@ -1,14 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/main.css">
         <title>Project Template</title>
     </head>
-    <body>
+    <body class="c-body l-body">
+        <main class="c-main l-main">
+            <section class="c-card--temperature l-card--temperature">
+                <span class="o-location l-location l-card__location">
+                    <img class="o-location__icon l-location__icon" src="./assets/pin.svg" alt="Pin"></img>
+                    <span class="o-location__text">São Paulo, SP</span>
+                </span>
 
+                <div class="o-temperature l-temperature l-card__temperature--temperature">
+                    <div class="o-temperature__now">
+                        18 <span class="o-temperature__now-deg l-temperature__now-deg">&deg;C</span>
+                    </div>
+
+                    <div class="o-temperature__variation l-temperature__variation">
+                        <div class="o-temperature__maximum">22&deg;</div>
+                        <div class="o-temperature__minimum">16&deg;</div>
+                    </div>
+                </div>
+
+                <div class="l-wrapper c-card__wrapper--temperature l-card__wrapper--temperature">
+                    <div class="c-card--weather l-card--weather">
+                        <img class="c-card__icon" src="./assets/wind.svg" alt="">
+                        <div class="c-card__content">
+                            <div class="c-card__title--weather">Vento</div>
+                            <div class="c-card__text">
+                                <div class="c-card__text-number">17</div>
+                                <div class="c-card__text-unit">km/h</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="c-card--weather l-card--weather">
+                        <img class="c-card__icon" src="./assets/weather.svg" alt="">
+                        <div class="c-card__content">
+                            <div class="c-card__title--weather">Umidade</div>
+                            <div class="c-card__text">
+                                <div class="c-card__text-number">31</div>
+                                <div class="c-card__text-unit">%</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="c-card--weather l-card--weather">
+                        <img class="c-card__icon" src="./assets/cloud-rainy.svg" alt="">
+                        <div class="c-card__content">
+                            <div class="c-card__title--weather">Chuva</div>
+                            <div class="c-card__text">
+                                <div class="c-card__text-number">10</div>
+                                <div class="c-card__text-unit">%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
     </body>
     <script src="js/main.js"></script>
 </html>

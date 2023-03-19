@@ -1,0 +1,10 @@
+$component-name: 'c-body';
+$layout-name: 'l-body';
+
+.#{$component-name}{
+    @apply grid place-items-center font-main-font-family bg-main-bg-image bg-no-repeat bg-cover bg-right backdrop-blur-main-blur;
+}
+
+.#{$layout-name}{
+    @apply min-h-screen;
+}

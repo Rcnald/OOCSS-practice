@@ -1,0 +1,37 @@
+$object-name: 'o-temperature';
+$layout-name: 'l-temperature';
+
+.#{$object-name}{
+    @apply flex flex-col gap-[0.625rem];
+
+    &__now{
+        @apply flex text-emphasis-font-size font-bold leading-[1] tracking-[0.3125rem] text-white;
+
+        &-deg{
+            @apply flex text-[calc(var(--emphasis-font-size)/4)] tracking-[0.25rem] text-indicator-text-color;
+        }
+    }
+
+    &__variation{
+        @apply flex justify-center gap-[0.3125rem] font-bold text-[calc(var(--emphasis-font-size)/4)] text-white;
+    }
+
+    &__minimum{
+        @apply text-indicator-text-color;
+    }
+    
+}
+
+.#{$layout-name}{
+    @apply w-fit;
+
+    &__now{
+        &-deg{
+            @apply h-fit mt-[1rem];
+        }
+    }
+
+    &__variation{
+        @apply w-[75%];
+    }
+}

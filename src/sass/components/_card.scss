@@ -1,0 +1,93 @@
+@use '../abstract/' as *;
+
+$component-name: 'c-card';
+$layout-name: 'l-card';
+
+.#{$component-name}{
+    @apply grid items-center relative bg-card-bg-color rounded-card-radius p-card-padding;
+
+    &--temperature{
+        @extend .#{$component-name};
+
+        @apply bg-card-bg-image bg-cover bg-no-repeat bg-right gap-[5rem];
+    }
+
+    &--weather{
+        @extend .#{$component-name};
+
+        @apply flex items-center gap-[0.75rem] bg-card-weather-bg-color text-indicator-text-color;
+    }
+
+    &__title{
+        &--weather{
+            @apply text-small-font-size;
+        }
+    }
+
+    &__wrapper{
+        &--temperature{
+            @apply grid grid-cols-[repeat(auto-fit,minmax(7.5rem,1fr))] place-items-center gap-[0.5rem];
+        }
+    }
+
+    &__content{
+        @apply flex flex-col leading-[1] gap-[0.25rem];
+    }
+
+    &__text{
+        @apply flex items-end font-bold gap-[0.25rem];
+
+        &-number{
+            @apply text-header-font-size ;
+        }
+
+        &-unit{
+            @apply text-small-font-size h-fit;
+        }
+    }
+}
+
+.#{$layout-name}{
+    @apply w-full;
+
+    &--temperature{
+        @extend .#{$layout-name};
+
+        @apply max-w-[30rem] min-h-[30rem];
+
+        &::after{
+            --cloud-width: 5.3125rem;
+            --cloud-height: 2.8125rem;
+            --cloud-top: -0.5rem;
+            --cloud-left: -1.5625rem;
+
+            @apply content-[''] absolute w-[var(--cloud-width)] h-[var(--cloud-height)] left-[var(--cloud-left)] top-[var(--cloud-top)] bg-cloud-big-image bg-contain bg-no-repeat;
+
+            @include breakpoint(min,md){
+               @apply w-[calc(var(--cloud-width)*2)] h-[calc(var(--cloud-height)*2)] left-[calc(var(--cloud-left)*2)] top-[calc(var(--cloud-top)*2)];
+            };
+        }
+    }
+
+    &--weather{
+        @extend .#{$layout-name};
+        
+        @apply max-h-[3.75rem];
+    }
+
+    &__location{
+        @apply place-self-end self-start;
+    }
+
+    &__temperature{
+        &--temperature{
+            @apply place-self-center;
+        }
+    }
+
+    &__wrapper{
+        &--temperature{
+            @apply justify-self-end self-end;
+        }
+    }
+}

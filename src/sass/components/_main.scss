@@ -1,0 +1,11 @@
+$component-name: 'c-main';
+$layout-name: 'l-main';
+
+
+.#{$component-name}{
+    @apply px-main-padding
+}
+
+.#{$layout-name}{
+    @apply grid w-full max-w-[68.125rem];
+}
