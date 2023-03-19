@@ -26,7 +26,7 @@ $layout-name: 'l-card';
 
     &__wrapper{
         &--temperature{
-            @apply grid grid-cols-[repeat(auto-fit,minmax(130px,1fr))] place-items-center gap-[0.5rem];
+            @apply flex flex-wrap gap-[0.5rem];
         }
     }
 
@@ -72,7 +72,7 @@ $layout-name: 'l-card';
     &--weather{
         @extend .#{$layout-name};
         
-        @apply max-h-[3.75rem];
+        @apply max-h-[3.75rem] flex-[1_1_120px];
     }
 
     &__location{
