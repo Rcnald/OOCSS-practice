@@ -1,0 +1,10 @@
+$obejct-name: 'o-title';
+$layout-name: 'l-title';
+
+.#{$obejct-name}{
+    @apply flex gap-[0.5rem] text-indicator-text-color font-bold text-medium-font-size;
+}
+
+.#{$layout-name}{
+    @apply w-fit;
+}

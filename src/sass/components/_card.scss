@@ -4,56 +4,75 @@ $component-name: 'c-card';
 $layout-name: 'l-card';
 
 .#{$component-name}{
-    @apply grid items-center relative bg-card-bg-color rounded-card-radius p-card-padding;
+    @apply flex flex-col justify-between items-center bg-card-bg-color rounded-card-radius p-card-padding;
 
     &--temperature{
-        @extend .#{$component-name};
-
-        @apply bg-card-bg-image bg-cover bg-no-repeat bg-right gap-[5rem];
+        @apply relative bg-card-bg-image bg-cover bg-no-repeat bg-right gap-[5rem];
     }
 
+    
     &--weather{
-        @extend .#{$component-name};
-
-        @apply flex items-center gap-[0.75rem] bg-card-weather-bg-color text-indicator-text-color;
+        @apply flex-row gap-[0.75rem] justify-start bg-card-weather-bg-color;
     }
-
+    
     &__title{
         &--weather{
             @apply text-small-font-size;
         }
     }
-
+    
     &__wrapper{
         &--temperature{
             @apply flex flex-wrap gap-[0.5rem];
         }
+
+        &--air{
+            @apply flex justify-between;
+        }
     }
+    
+    &__rate{
+        @apply flex font-bold gap-[0.25rem] leading-[1] text-indicator-text-color;
 
-    &__content{
-        @apply flex flex-col leading-[1] gap-[0.25rem];
-    }
-
-    &__text{
-        @apply flex items-end font-bold gap-[0.25rem];
-
-        &-number{
-            @apply text-header-font-size ;
+        &--weather{
+            @apply items-end;
         }
 
-        &-unit{
-            @apply text-small-font-size h-fit;
+        &--air{
+            @apply flex-col items-center;
         }
+    }
+
+    &__value{
+        @apply text-header-font-size;
+
+        &--air{
+            @apply text-[calc(var(--emphasis-font-size)/2)] text-white;
+        }
+
+        &--green-small{
+            @apply text-rate-text-color text-regular-font-size;
+        }
+    }
+
+    &__unit{
+        @apply text-small-font-size h-fit;
+
+        &--fs-regular{
+            @apply font-normal;
+        }
+    }
+
+    &__status{
+        @apply text-rate-text-color text-header-font-size;
     }
 }
 
 .#{$layout-name}{
-    @apply w-full;
+    @apply w-full h-full;
 
     &--temperature{
-        @extend .#{$layout-name};
-
-        @apply max-w-[30rem] min-h-[30rem];
+        @apply max-w-[30rem] min-h-[30rem] col-start-1 row-start-1 row-span-2;
 
         &::after{
             --cloud-width: 5.3125rem;
@@ -68,26 +87,27 @@ $layout-name: 'l-card';
             };
         }
     }
-
+    
     &--weather{
-        @extend .#{$layout-name};
-        
-        @apply max-h-[3.75rem] flex-[1_1_120px];
+        @apply max-h-[3.75rem] flex-[1_1_130px];
     }
 
+    &--air{
+        @apply min-h-[15rem];
+    }
+    
+    
     &__location{
-        @apply place-self-end self-start;
+        @apply self-end;
     }
-
-    &__temperature{
-        &--temperature{
-            @apply place-self-center;
-        }
-    }
-
+    
     &__wrapper{
         &--temperature{
-            @apply justify-self-end self-end;
+            @apply self-end;
         }
+    }
+
+    &__title{
+        @apply pt-[1rem]
     }
 }

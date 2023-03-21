@@ -5,7 +5,7 @@ $layout-name: 'l-temperature';
     @apply flex flex-col gap-[0.625rem];
 
     &__now{
-        @apply flex text-emphasis-font-size font-bold leading-[1] tracking-[0.3125rem] text-white;
+        @apply flex relative text-emphasis-font-size font-bold leading-[1] tracking-[0.3125rem] text-white;
 
         &-deg{
             @apply flex text-[calc(var(--emphasis-font-size)/4)] tracking-[0.25rem] text-indicator-text-color;
@@ -27,11 +27,7 @@ $layout-name: 'l-temperature';
 
     &__now{
         &-deg{
-            @apply h-fit mt-[1rem];
+            @apply absolute h-fit left-[100%] top-[1rem];
         }
-    }
-
-    &__variation{
-        @apply w-[75%];
     }
 }

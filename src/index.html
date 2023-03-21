@@ -11,7 +11,7 @@
     </head>
     <body class="c-body l-body">
         <main class="c-main l-main">
-            <section class="c-card--temperature l-card--temperature">
+            <section class="c-card c-card--temperature l-card l-card--temperature">
                 <span class="o-location l-location l-card__location">
                     <img class="o-location__icon l-location__icon" src="./assets/pin.svg" alt="Pin"></img>
                     <span class="o-location__text">São Paulo, SP</span>
@@ -28,39 +28,92 @@
                     </div>
                 </div>
 
-                <div class="l-wrapper c-card__wrapper--temperature l-card__wrapper--temperature">
-                    <div class="c-card--weather l-card--weather">
+                <div class="l-wrapper c-card__wrapper c-card__wrapper--temperature l-card__wrapper l-card__wrapper--temperature">
+                    <div class="c-card c-card--weather l-card l-card--weather">
                         <img class="c-card__icon" src="./assets/wind.svg" alt="">
                         <div class="c-card__content">
-                            <div class="c-card__title--weather">Vento</div>
-                            <div class="c-card__text">
-                                <div class="c-card__text-number">17</div>
-                                <div class="c-card__text-unit">km/h</div>
+                            <h1 class="o-title l-title c-card__title c-card__title--weather">Vento</h1>
+                            <div class="c-card__rate c-card__rate--weather">
+                                <div class="c-card__value">17</div>
+                                <div class="c-card__unit">km/h</div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="c-card--weather l-card--weather">
+                    <div class="c-card c-card--weather l-card l-card--weather">
                         <img class="c-card__icon" src="./assets/weather.svg" alt="">
                         <div class="c-card__content">
-                            <div class="c-card__title--weather">Umidade</div>
-                            <div class="c-card__text">
-                                <div class="c-card__text-number">31</div>
-                                <div class="c-card__text-unit">%</div>
+                            <h1 class="o-title l-title c-card__title c-card__title--weather">Umidade</h1>
+                            <div class="c-card__rate c-card__rate--weather">
+                                <div class="c-card__value">31</div>
+                                <div class="c-card__unit">%</div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="c-card--weather l-card--weather">
+                    <div class="c-card c-card--weather l-card l-card--weather">
                         <img class="c-card__icon" src="./assets/cloud-rainy.svg" alt="">
                         <div class="c-card__content">
-                            <div class="c-card__title--weather">Chuva</div>
-                            <div class="c-card__text">
-                                <div class="c-card__text-number">10</div>
-                                <div class="c-card__text-unit">%</div>
+                            <h1 class="o-title l-title c-card__title c-card__title--weather">Chuva</h1>
+                            <div class="c-card__rate c-card__rate--weather">
+                                <div class="c-card__value">10</div>
+                                <div class="c-card__unit">%</div>
                             </div>
                         </div>
                     </div>
+                </div>
+            </section>
+
+            <section class="c-card c-card--air l-card l-card--air">
+                <h1 class="o-title l-title l-card__title">
+                    <img class="o-title__icon" src="./assets/leaf.svg" alt="Folha">Qualidade do ar
+                </h1>
+
+                <div class="c-card__rate c-card__rate--air">
+                    <div class="c-card__status">Boa</div>
+                    <div class="c-card__value c-card__value--air">21</div>
+                </div>
+
+                <div class="l-wrapper c-card__wrapper c-card__wrapper--air l-card__wrapper l-card__wrapper--air">
+                    <div class="c-card__rate c-card__rate--air">
+                        <span class="c-card__value c-card__value--green-small">12.9</span>
+                        <span class="c-card__unit c-card__unit--fs-regular">PM2.5</span>
+                    </div>
+                    <div class="c-card__rate c-card__rate--air">
+                        <span class="c-card__value c-card__value--green-small">12.9</span>
+                        <span class="c-card__unit c-card__unit--fs-regular">PM10</span>
+                    </div>
+                    <div class="c-card__rate c-card__rate--air">
+                        <span class="c-card__value c-card__value--green-small">2.1</span>
+                        <span class="c-card__unit c-card__unit--fs-regular">sO₂</span>
+                    </div>
+                    <div class="c-card__rate c-card__rate--air">
+                        <span class="c-card__value c-card__value--green-small">1.4</span>
+                        <span class="c-card__unit c-card__unit--fs-regular">NO₂</span>
+                    </div>
+                    <div class="c-card__rate c-card__rate--air">
+                        <span class="c-card__value c-card__value--green-small">21.2</span>
+                        <span class="c-card__unit c-card__unit--fs-regular">O₃</span>
+                    </div>
+                    <div class="c-card__rate c-card__rate--air">
+                        <span class="c-card__value c-card__value--green-small">0.7</span>
+                        <span class="c-card__unit c-card__unit--fs-regular">CO</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="c-card c-card--sun l-card l-card--sun">
+                <h1 class="o-title l-title l-card__title">
+                    <img class="o-title__icon" src="./assets/time.svg" alt="Tempo">Horário do sol
+                </h1>
+
+                
+            </section>
+
+            <section class="c-card l-card c-card--week-weather">
+                <div class="c-card__item c-card__item--day">
+                    <h1 class="o-title l-title l-card__title">Amanhã</h1>
+                    <img class="c-card__image" src="./assets/cloud-big.svg" alt="">
                 </div>
             </section>
         </main>

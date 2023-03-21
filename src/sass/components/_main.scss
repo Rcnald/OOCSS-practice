@@ -1,11 +1,21 @@
+@use '../abstract/' as *;
+
 $component-name: 'c-main';
 $layout-name: 'l-main';
 
 
 .#{$component-name}{
-    @apply px-main-padding
+    @apply px-main-padding gap-[1.875rem];
+
+    @include breakpoint(min,md){
+       @apply px-0;
+    };
 }
 
 .#{$layout-name}{
-    @apply grid w-full max-w-[68.125rem];
+    @apply w-full grid grid-cols-1 h-fit max-w-[68.125rem];
+
+    @include breakpoint(min,md){
+       @apply grid-cols-[480px_277px_277px] grid-rows-[244px_212px];
+    };
 }

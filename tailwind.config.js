@@ -16,6 +16,7 @@ module.exports = {
       },
       fontSize:{
         'header-font-size':'var(--header-font-size)',
+        'medium-font-size':'var(--medium-font-size)',
         'small-font-size':'var(--small-font-size)',
         'regular-font-size':'var(--regular-font-size)',
         'emphasis-font-size':'var(--emphasis-font-size)',
