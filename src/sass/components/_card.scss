@@ -16,12 +16,20 @@ $layout-name: 'l-card';
     }
 
     &--week-weather{
-        @apply flex-row p-[var(--week-weather-padding)]; 
+        @apply flex-row p-[var(--week-weather-padding)] flex-wrap gap-[1rem]; 
+
+        @include breakpoint(min,xl){
+           @apply gap-0;
+        };
     }
     
     &__title{
         &--weather{
             @apply text-small-font-size;
+        }
+
+        &--week-weather{
+            @apply text-regular-font-size;
         }
     }
     
@@ -127,12 +135,22 @@ $layout-name: 'l-card';
     }
 
     &__title{
-        @apply pt-[1rem]
+        @apply pt-[1rem];
+
+        &--week-weather{
+            @apply p-0;
+        }
     }
 
     &__image{
         &--week-weather{
             @apply w-[64px] aspect-square object-scale-down shrink-0;
+        }
+    }
+
+    &__item{
+        &--week-weather{
+            @apply flex-[1_1_100px]
         }
     }
 }
