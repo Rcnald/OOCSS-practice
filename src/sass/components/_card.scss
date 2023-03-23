@@ -14,6 +14,10 @@ $layout-name: 'l-card';
     &--weather{
         @apply flex-row gap-[0.75rem] justify-start bg-card-weather-bg-color;
     }
+
+    &--week-weather{
+        @apply flex-row p-[var(--week-weather-padding)]; 
+    }
     
     &__title{
         &--weather{
@@ -66,6 +70,14 @@ $layout-name: 'l-card';
     &__status{
         @apply text-rate-text-color text-header-font-size;
     }
+
+    &__variation{
+        @apply text-medium-font-size;
+    }
+
+    &__item{
+        @apply flex flex-col items-center gap-[1rem];
+    }
 }
 
 .#{$layout-name}{
@@ -82,7 +94,7 @@ $layout-name: 'l-card';
 
             @apply content-[''] absolute w-[var(--cloud-width)] h-[var(--cloud-height)] left-[var(--cloud-left)] top-[var(--cloud-top)] bg-cloud-big-image bg-contain bg-no-repeat;
 
-            @include breakpoint(min,md){
+            @include breakpoint(min,lg){
                @apply w-[calc(var(--cloud-width)*2)] h-[calc(var(--cloud-height)*2)] left-[calc(var(--cloud-left)*2)] top-[calc(var(--cloud-top)*2)];
             };
         }
@@ -96,6 +108,13 @@ $layout-name: 'l-card';
         @apply min-h-[15rem];
     }
     
+    &--week-weather{
+        @apply col-span-1;
+
+        @include breakpoint(min,sm){
+           @apply col-span-2;
+        };
+    }
     
     &__location{
         @apply self-end;
@@ -109,5 +128,11 @@ $layout-name: 'l-card';
 
     &__title{
         @apply pt-[1rem]
+    }
+
+    &__image{
+        &--week-weather{
+            @apply w-[64px] aspect-square object-scale-down shrink-0;
+        }
     }
 }

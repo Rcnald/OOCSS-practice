@@ -5,7 +5,7 @@ $layout-name: 'l-main';
 
 
 .#{$component-name}{
-    @apply px-main-padding gap-[1.875rem];
+    @apply px-main-padding gap-[1.875rem] place-content-center;
 
     @include breakpoint(min,md){
        @apply px-0;
@@ -13,9 +13,14 @@ $layout-name: 'l-main';
 }
 
 .#{$layout-name}{
-    @apply w-full grid grid-cols-1 h-fit max-w-[68.125rem];
+    @apply w-fit grid grid-cols-1 h-fit max-w-[68.125rem];
 
     @include breakpoint(min,md){
+        @apply grid-cols-[480px_277px] grid-rows-[244px_212px];
+    };
+
+    @include breakpoint(min,xl){
        @apply grid-cols-[480px_277px_277px] grid-rows-[244px_212px];
     };
+    
 }

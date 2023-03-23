@@ -17,7 +17,7 @@
                     <span class="o-location__text">São Paulo, SP</span>
                 </span>
 
-                <div class="o-temperature l-temperature l-card__temperature--temperature">
+                <div class="o-temperature l-temperature">
                     <div class="o-temperature__now">
                         18 <span class="o-temperature__now-deg l-temperature__now-deg">&deg;C</span>
                     </div>
@@ -110,10 +110,60 @@
                 
             </section>
 
-            <section class="c-card l-card c-card--week-weather">
-                <div class="c-card__item c-card__item--day">
+            <section class="c-card l-card c-card--week-weather l-card--week-weather">
+                <div class="c-card__item c-card__item--week-weather">
                     <h1 class="o-title l-title l-card__title">Amanhã</h1>
-                    <img class="c-card__image" src="./assets/cloud-big.svg" alt="">
+                    <img class="c-card__image l-card__image l-card__image--week-weather" src="./assets/cloud-big.svg" alt="Nuvem densa">
+                    <div class="o-temperature l-temperature c-card__temperature">
+                        <div class="o-temperature__variation l-temperature__variation c-card__variation">
+                            <div class="o-temperature__maximum">21&deg;</div>
+                            <div class="o-temperature__minimum">16&deg;</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="c-card__item c-card__item--week-weather">
+                    <h1 class="o-title l-title l-card__title">Sexta-feira</h1>
+                    <img class="c-card__image l-card__image l-card__image--week-weather" src="./assets/sun.svg" alt="Sol">
+                    <div class="o-temperature l-temperature c-card__temperature">
+                        <div class="o-temperature__variation l-temperature__variation c-card__variation">
+                            <div class="o-temperature__maximum">28&deg;</div>
+                            <div class="o-temperature__minimum">20&deg;</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="c-card__item c-card__item--week-weather">
+                    <h1 class="o-title l-title l-card__title">Sábado</h1>
+                    <img class="c-card__image l-card__image l-card__image--week-weather" src="./assets/cloud-rain.svg" alt="Nuvem chuvosa">
+                    <div class="o-temperature l-temperature c-card__temperature">
+                        <div class="o-temperature__variation l-temperature__variation c-card__variation">
+                            <div class="o-temperature__maximum">25&deg;</div>
+                            <div class="o-temperature__minimum">21&deg;</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="c-card__item c-card__item--week-weather">
+                    <h1 class="o-title l-title l-card__title">Domingo</h1>
+                    <img class="c-card__image l-card__image l-card__image--week-weather" src="./assets/cloud-storm.svg" alt="Nuvem trovejante">
+                    <div class="o-temperature l-temperature c-card__temperature">
+                        <div class="o-temperature__variation l-temperature__variation c-card__variation">
+                            <div class="o-temperature__maximum">20&deg;</div>
+                            <div class="o-temperature__minimum">14&deg;</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="c-card__item c-card__item--week-weather">
+                    <h1 class="o-title l-title l-card__title">Segunda-feira</h1>
+                    <img class="c-card__image l-card__image l-card__image--week-weather" src="./assets/sun-cloud.svg" alt="Nublado">
+                    <div class="o-temperature l-temperature c-card__temperature">
+                        <div class="o-temperature__variation l-temperature__variation c-card__variation">
+                            <div class="o-temperature__maximum">24&deg;</div>
+                            <div class="o-temperature__minimum">18&deg;</div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>
