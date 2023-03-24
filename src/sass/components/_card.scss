@@ -39,7 +39,7 @@ $layout-name: 'l-card';
         }
 
         &--air{
-            @apply flex justify-between;
+            @apply flex justify-between flex-wrap gap-y-[0.625rem];
         }
     }
     
@@ -51,7 +51,7 @@ $layout-name: 'l-card';
         }
 
         &--air{
-            @apply flex-col items-center;
+            @apply flex-col items-center flex-[1_1_40px];
         }
     }
 

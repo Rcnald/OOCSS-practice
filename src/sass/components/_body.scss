@@ -6,5 +6,5 @@ $layout-name: 'l-body';
 }
 
 .#{$layout-name}{
-    @apply min-h-screen px-10;
+    @apply min-h-screen;
 }

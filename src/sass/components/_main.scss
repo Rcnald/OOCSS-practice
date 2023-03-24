@@ -5,7 +5,7 @@ $layout-name: 'l-main';
 
 
 .#{$component-name}{
-    @apply px-main-padding gap-[1.875rem] place-content-center;
+    @apply p-main-padding gap-[1.875rem] place-content-center;
 
     @include breakpoint(min,md){
        @apply px-0;
