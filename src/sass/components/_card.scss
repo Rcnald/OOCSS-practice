@@ -23,7 +23,7 @@ $layout-name: 'l-card';
     }
 
     &--sun{
-        @apply justify-end gap-[8px];
+        @apply justify-end gap-[0.5rem];
     }
     
     &__title{
@@ -37,18 +37,18 @@ $layout-name: 'l-card';
     }
     
     &__wrapper{
-        @apply flex;
+        @apply flex flex-wrap;
 
         &--temperature{
-            @apply flex-wrap gap-[0.5rem];
+            @apply gap-[0.5rem];
         }
 
         &--air{
-            @apply justify-between flex-wrap gap-y-[0.625rem];
+            @apply justify-between gap-y-[0.625rem];
         }
 
         &--sun{
-            @apply justify-center
+            @apply justify-center flex-nowrap;
         }
     }
     
