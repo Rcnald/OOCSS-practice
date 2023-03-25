@@ -10,6 +10,8 @@ module.exports = {
         'main-text-color':'var(--main-text-color)',
         'card-bg-color':'var(--card-bg-color)',
         'card-weather-bg-color':'var(--card-weather-bg-color)',
+        'sun-bg-color':'var(--sun-bg-color)',
+        'char-bg-color':'var(--char-bg-color)',
       },
       fontFamily:{
         'main-font-family':'var(--main-font-family)',

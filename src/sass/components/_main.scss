@@ -22,5 +22,4 @@ $layout-name: 'l-main';
     @include breakpoint(min,xl){
        @apply grid-cols-[480px_277px_277px] grid-rows-[244px_212px];
     };
-    
 }

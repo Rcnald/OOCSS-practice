@@ -33,12 +33,18 @@ $layout-name: 'l-card';
     }
     
     &__wrapper{
+        @apply flex;
+
         &--temperature{
-            @apply flex flex-wrap gap-[0.5rem];
+            @apply flex-wrap gap-[0.5rem];
         }
 
         &--air{
-            @apply flex justify-between flex-wrap gap-y-[0.625rem];
+            @apply justify-between flex-wrap gap-y-[0.625rem];
+        }
+
+        &--sun{
+            @apply justify-center
         }
     }
     
@@ -84,6 +90,32 @@ $layout-name: 'l-card';
 
     &__item{
         @apply flex flex-col items-center gap-[1rem];
+    }
+
+    &__chart{
+        @apply flex items-start; 
+        
+        &::before{
+            @apply bg-sun-bg-color rounded-full;
+        }
+    }
+
+    &__char{
+        &::before{
+            --mask: linear-gradient(0deg, white 50%, transparent 0%);;
+
+            @apply content-[''] rounded-full;
+            background: var(--char-bg-color);
+
+            mask: var(--mask);
+            -webkit-mask: var(--mask);
+
+            rotate: 0deg
+        }
+    }
+
+    &__image{
+        @apply object-contain;
     }
 }
 
@@ -131,6 +163,10 @@ $layout-name: 'l-card';
         &--temperature{
             @apply self-end;
         }
+
+        &--sun{
+            @apply h-[6.875rem] relative;
+        }
     }
 
     &__title{
@@ -145,6 +181,10 @@ $layout-name: 'l-card';
         &--week-weather{
             @apply w-[64px] aspect-square object-scale-down shrink-0;
         }
+
+        &--sun{
+            @apply absolute top-0;
+        }
     }
 
     &__rate{
@@ -156,6 +196,26 @@ $layout-name: 'l-card';
     &__item{
         &--week-weather{
             @apply flex-[1_1_100px]
+        }
+    }
+
+    &__chart{
+        @apply relative w-[13.5rem] h-[13.5rem];
+
+        &::before{
+            --rotation: 50;
+
+            @apply content-[''] absolute w-[12px] h-[12px] top-[50%] left-[50%];
+            translate: -50% -50%;
+            transform: rotate(calc(1deg * (( 100 - var(--rotation) )/ (-100) * 180) )) translate(106px);
+        }
+    }
+
+    &__char{
+        @apply overflow-hidden h-[108px];
+
+        &::before{
+            @apply content-[''] w-[216px] h-[216px] block;
         }
     }
 }
