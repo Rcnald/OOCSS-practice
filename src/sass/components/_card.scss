@@ -110,7 +110,7 @@ $layout-name: 'l-card';
             mask: var(--mask);
             -webkit-mask: var(--mask);
 
-            rotate: 0deg
+            rotate: calc(1.8deg * var(--rotation));
         }
     }
 
@@ -200,11 +200,9 @@ $layout-name: 'l-card';
     }
 
     &__chart{
-        @apply relative w-[13.5rem] h-[13.5rem];
+        @apply relative w-[var(--sun-chart-width)] h-[var(--sun-chart-width)];
 
         &::before{
-            --rotation: 50;
-
             @apply content-[''] absolute w-[12px] h-[12px] top-[50%] left-[50%];
             translate: -50% -50%;
             transform: rotate(calc(1deg * (( 100 - var(--rotation) )/ (-100) * 180) )) translate(106px);
@@ -212,10 +210,10 @@ $layout-name: 'l-card';
     }
 
     &__char{
-        @apply overflow-hidden h-[108px];
+        @apply overflow-hidden h-[calc(var(--sun-chart-width)/2)];
 
         &::before{
-            @apply content-[''] w-[216px] h-[216px] block;
+            @apply content-[''] w-[var(--sun-chart-width)] h-[var(--sun-chart-width)] block;
         }
     }
 }
