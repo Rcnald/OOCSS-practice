@@ -21,6 +21,10 @@ $layout-name: 'l-card';
            @apply gap-0;
         };
     }
+
+    &--sun{
+        @apply justify-end gap-[8px];
+    }
     
     &__title{
         &--weather{
@@ -93,7 +97,7 @@ $layout-name: 'l-card';
     }
 
     &__chart{
-        @apply flex items-start; 
+        @apply flex flex-col justify-start; 
         
         &::before{
             @apply bg-sun-bg-color rounded-full;
@@ -116,6 +120,18 @@ $layout-name: 'l-card';
 
     &__image{
         @apply object-contain;
+    }
+
+    &__time{
+        @apply text-small-font-size font-normal;
+
+        &--now{
+            @apply text-regular-font-size font-bold;
+        }
+    }
+
+    &__clock{
+        @apply flex justify-between;
     }
 }
 
@@ -175,6 +191,10 @@ $layout-name: 'l-card';
         &--week-weather{
             @apply p-0;
         }
+
+        &--sun{
+            @apply mb-auto;
+        }
     }
 
     &__image{
@@ -215,5 +235,16 @@ $layout-name: 'l-card';
         &::before{
             @apply content-[''] w-[var(--sun-chart-width)] h-[var(--sun-chart-width)] block;
         }
+    }
+
+    &__time{
+        &--now{
+            @apply absolute top-[25%] left-[50%];
+            translate: -50% 0
+        }
+    }
+
+    &__clock{
+        @apply w-full max-w-[15.3125rem];
     }
 }

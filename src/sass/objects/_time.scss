@@ -1,0 +1,10 @@
+$object-name: 'o-time';
+$layout-name: 'l-';
+
+.#{$object-name}{
+    @apply font-bold text-regular-font-size text-white;
+}
+
+.#{$layout-name}{
+
+}
